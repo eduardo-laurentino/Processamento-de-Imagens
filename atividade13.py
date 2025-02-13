@@ -2,14 +2,15 @@
 import numpy as np
 import cv2,sys
 
+# O código a seguir detecta rostos em um video
 cap = cv2.VideoCapture("videos/IFMA Campus Caxias.mp4")
 if not cap.isOpened():
     print("Erro ao abrir a camera")
     sys.exit(0)
 
 face_cascade = cv2.CascadeClassifier('classificadores/haarcascade_frontalface_default.xml')
-#eye_cascade = cv2.CascadeClassifier('classificadores/haarcascade_eye.xml')
-#mouth_cascade = cv2.CascadeClassifier('classificadores/haarcascade_mcs_mouth.xml')
+eye_cascade = cv2.CascadeClassifier('classificadores/haarcascade_eye.xml')
+mouth_cascade = cv2.CascadeClassifier('classificadores/haarcascade_mcs_mouth.xml')
 
 #cv2.namedWindow('Cam')
 pessoas = 0

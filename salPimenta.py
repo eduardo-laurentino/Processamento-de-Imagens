@@ -1,8 +1,9 @@
 import cv2
 import numpy as np
 import random
-# capture = cv2.VideoCapture(0)
-capture = cv2.VideoCapture("videos/IFMA Campus Caxias.mp4")
+# Acessa a câmera do computador
+capture = cv2.VideoCapture(0)
+#capture = cv2.VideoCapture("videos/IFMA Campus Caxias.mp4")
 
 def noise(image,prob):
     output = np.zeros(image.shape,np.uint8)

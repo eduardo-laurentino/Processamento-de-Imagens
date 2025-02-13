@@ -1,3 +1,5 @@
+"""Esse código aplica operações morfológicas a uma imagem em escala de cinza, usando técnicas como erosão e dilatação . Ele manipula a estrutura da imagem para destacar ou remover características específicas"""
+
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt

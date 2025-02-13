@@ -1,5 +1,6 @@
 import cv2
 
+# O código a seguir faz aplicação do filtro Canny, um dos métodos mais populares para detecção de bordas em imagens.
 capture = cv2.VideoCapture("videos/IFMA Campus Caxias.mp4")
 
 if not capture.isOpened():

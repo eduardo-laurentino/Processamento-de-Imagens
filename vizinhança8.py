@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-import random
 
 img = cv2.imread('imagens/logo-if.jpg', cv2.IMREAD_GRAYSCALE)
 

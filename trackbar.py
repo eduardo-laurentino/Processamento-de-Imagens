@@ -2,22 +2,23 @@ import numpy as np
 import cv2 as cv
 def nothing(x):
     pass
-# Create a black image, a window
+# Cria uma imagem preta, uma janela
 img = np.zeros((300,512,3), np.uint8)
 cv.namedWindow('image')
-# create trackbars for color change
+# Cria barras de rolagem horizontal para mudança de cor
 cv.createTrackbar('R','image',0,255,nothing)
 cv.createTrackbar('G','image',0,255,nothing)
 cv.createTrackbar('B','image',0,255,nothing)
-# create switch for ON/OFF functionality
+# Criar switch para funcionalidade ON/OFF
 switch = '0 : OFF \n1 : ON'
 cv.createTrackbar(switch, 'image',0,1,nothing)
 while(1):
+    # Pressione esc para fechar a janela
     cv.imshow('image',img)
     k = cv.waitKey(1) & 0xFF
     if k == 27:
         break
-    # get current positions of four trackbars
+    # obter as posições atuais de quatro barras de rolagem horizontal
     r = cv.getTrackbarPos('R','image')
     g = cv.getTrackbarPos('G','image')
     b = cv.getTrackbarPos('B','image')
